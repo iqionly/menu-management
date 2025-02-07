@@ -14,16 +14,33 @@ You can install the package via composer:
 composer require iqionly/menu-management
 ```
 
-## Usage
+## Before Usage
 
 ```php
-// Usage description here
+# Needed run once, to run the application
+php artisan vendor:publish --tag=menu-management.assets 
+# For change language (optional)
+php artisan vendor:publish --tag=menu-management.lang 
+# For change the view 
+php artisan vendor:publish --tag=menu-management.view
+
+# Other tags, maybe needed
+# 
+# menu-management.config
+# menu-management.tables
+# 
 ```
 
-### Testing
+## Usage
 
-```bash
-composer test
+For editor just this component blade:
+```html
+<x-menu-management-editor></x-menu-management-editor>
+```
+
+For showing the menu, use this:
+```html
+<x-menu-management-navigation></x-menu-management-navigation>
 ```
 
 ### Changelog
@@ -40,7 +57,8 @@ If you discover any security related issues, please email izzy25.mr@gmail.com in
 
 ## Credits
 
--   [Mochammad Rizky Ashyari](https://github.com/iqionly)
+-   [jQuery Teams](https://jquery.com/)
+-   [Ivan Bozhanov](http://jstree.com/)
 -   [All Contributors](../../contributors)
 
 ## License
